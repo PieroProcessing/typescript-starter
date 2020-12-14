@@ -1,0 +1,21 @@
+{
+  "user1" :{
+    "creditor": {
+      "name": "John Doe",
+      "account": {
+        "accountCode": "IT23A0336844430152923804660"
+      }
+    },
+    "description": "Payment invoice 75/2017",
+    "amount": 800,
+    "currency": "EUR"
+  },
+  "user2" :{
+    "accountId": 14537780,
+    "receiverName": "Piero Pappalardo",
+    "description": "Bank trasfer",
+    "currency": "EUR",
+    "amount": "800",
+    "executionDate": "14/12/2020"
+  }
+}
