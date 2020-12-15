@@ -32,7 +32,7 @@ export const moneyTransfers = async (accountId: string, bankTransfert: BankTrasf
     }
 }
 
-export const getCashAccounts = async (accountId: string, fromAccountingDate: string, toAccountingDate: string): Promise<Transaction[]> => {
+export const getTransactions = async (accountId: string, fromAccountingDate: string, toAccountingDate: string): Promise<Transaction[]> => {
     try {
         let url = `${baseUrl}/api/gbs/banking/v4.0/accounts/${accountId}/transactions`
         const { data } = await axios.get(url, { ...config, params: { fromAccountingDate, toAccountingDate } });

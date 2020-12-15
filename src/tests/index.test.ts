@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { accountId } from '../configuration.stage.json';
-import { getCashAccount, getCashAccounts, moneyTransfers } from "..";
+import { getCashAccount, getTransactions, moneyTransfers } from "..";
 import { Account } from "../models/Account";
 import { user1, user2 } from "./fakeBankTrasfers.json";
 import { Transaction } from "../models/Transaction";
@@ -10,8 +10,8 @@ describe('getCashAccount', () => {
     const { accountId: id } = await getCashAccount(accountId) as Account;
     expect(accountId).equal(id);
   });
-  it('getCashAccounts', async () => {
-    const transactions = await getCashAccounts(accountId, '2020-04-01', '2020-12-01') as Transaction[];
+  it('getTransactions', async () => {
+    const transactions = await getTransactions(accountId, '2020-04-01', '2020-12-01') as Transaction[];
     expect(transactions).to.have.property('length');
   });
   it('bankTrasfer with user1', async () => {
